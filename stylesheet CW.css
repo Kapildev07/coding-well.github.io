@@ -193,19 +193,28 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;
+    align-items: 60%;
+    
 }
 .explore-content{
     width: 60%;
-    padding: 50px;
+    padding: 10px;
+    margin: 50px;
     color: whitesmoke;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    
+    
 }
 .explore-content h1{
     font-size: 7vmin;
-    margin: 50px;
+    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+    
     
 
 }
@@ -326,19 +335,19 @@ p{
         background-color: aqua;
         border: 2px solid #ddd;
         border-radius: 4px;
-        float: left;
-        width: 15.33%;
-        margin-left: 60px;
+        
+        width: 16.33%;
+        margin-left: 50px;
         padding: 10px;
         transition: width 0.2s;
     }
-    .coll {
+    .col {
         background-color: aqua;
         border: 2px solid #ddd;
         border-radius: 4px;
-        float: left;
+        floa
         width: 15.33%;
-        margin-left: 60px;
+        margin-left: 0px;
         padding: 10px;
         transition: width 0.2s;
     }
@@ -351,4 +360,3 @@ p{
     }
  
   
-
