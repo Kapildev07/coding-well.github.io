@@ -118,6 +118,11 @@ header{
     border-radius: 38px;
     color: purple;
 }
+.ctn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #3e8e41;
+}
 .menu-btn{
     position: absolute;
     top: 50px;
@@ -126,6 +131,21 @@ header{
     cursor: pointer;
     display: none;
 }
+.menu-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+  
+.menu-btn:hover {
+    transform: translateY(-5px);
+}
+  
+  
 
 /*Pogramming Lnguage*/
 section{
@@ -268,6 +288,7 @@ p{
         display: block;
     }
     
+    
     }
     .navbar{
         padding: 0px;
@@ -327,4 +348,7 @@ p{
         clear: bot
      
 
-}
+    }
+ 
+  
+
