@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="c.css">
+    <title>C Programming Notes</title>
+</head>
+<body>
+    <header>
+        <h1>C Programming Notes</h1>
+    </header>
+    <nav>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#datatypes">Data Types</a></li>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#controlstructures">Control Structures</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#arrays">Arrays</a></li>
+                <li><a href="#pointers">Pointers</a></li>
+                <li><a href="#structs">Structures</a></li>
+                <li><a href="#fileio">File I/O</a></li>
+                <li><a href="#dynamicmemory">Dynamic Memory Allocation</a></li>
+                <li><a href="#preprocessor">Preprocessor Directives</a></li>
+                <li><a href="#recursion">Recursion</a></li>
+                <li><a href="#bitwise">Bitwise Operations</a></li>
+                <li><a href="#typedef">typedef and Type Aliases</a></li>
+                <li><a href="#enum">Enumeration</a></li>
+                <li><a href="#linkedlist">Linked Lists</a></li>
+                <li><a href="#sorting">Sorting Algorithms</a></li>
+                <li><a href="#searching">Searching Algorithms</a></li>
+                <!-- Add more topic links here -->
+            </ul>
+        </nav>
+        
+    </nav>
+    <main>
+        <section id="intro">
+            <h2>Introduction to C Programming</h2>
+            <p>C is a versatile and widely-used programming language that was developed in the early 1970s by Dennis Ritchie at Bell Labs. It is considered one of the foundational languages in the field of programming.</p>
+            <p>Known for its simplicity and powerful features, C has been used to build operating systems, applications, games, and much more.</p>
+            <p>Key features of C include:</p>
+            <ul>
+                <li>Low-level memory manipulation capabilities</li>
+                <li>Efficient execution and performance</li>
+                <li>Portability across different hardware and operating systems</li>
+                <li>Extensive standard library for various tasks</li>
+            </ul>
+            <p>C has influenced many other programming languages, and its concepts are often taught as fundamental programming concepts. In these notes, we'll explore the essential concepts of C programming to help you build a solid foundation.</p>
+        </section>
+        
+        <section id="variables">
+            <h2>Variables and Data Types</h2>
+            <p>In C, variables are used to store data, and each variable has a specific data type that determines the kind of value it can hold.</p>
+            
+            <h3>Data Types</h3>
+            <p>C provides various data types, such as:</p>
+            <ul>
+                <li><code>int</code>: Integer data type</li>
+                <li><code>float</code>: Floating-point data type</li>
+                <li><code>char</code>: Character data type</li>
+                <!-- Add more data types here -->
+            </ul>
+        
+            <h3>Example:</h3>
+            <pre><code class="language-c">
+        #include <stdio.h>
+        
+        int main() {
+            int age = 25;
+            float weight = 65.5;
+            char grade = 'A';
+            
+            printf("Age: %d\n", age);
+            printf("Weight: %.1f\n", weight);
+            printf("Grade: %c\n", grade);
+            
+            return 0;
+        }
+            </code></pre>
+        
+            <h3>Compilation:</h3>
+            <p>To compile and run the above code, save it in a file named <code>variables.c</code>. Then, open a terminal and run these commands:</p>
+            <pre><code class="language-bash">
+        $ gcc variables.c -o variables
+        $ ./variables
+            </code></pre>
+        
+            <p>This will compile the code using the GCC compiler and create an executable named <code>variables</code>. Running <code>./variables</code> will execute the program and display the values of the variables.</p>
+        </section>
+        
+        
+        
+        <section id="datatype">
+            <h2>Data Types</h2>
+            <p>In C programming, data types specify the type of values that variables can hold. Different data types are used to represent different kinds of values.</p>
+            <p>Here are some commonly used data types in C:</p>
+            <ul>
+                <li><code>int</code>: Used for storing whole numbers.</li>
+                <li><code>float</code>: Used for storing floating-point numbers (decimal numbers).</li>
+                <li><code>char</code>: Used for storing single characters.</li>
+                <li><code>double</code>: Used for storing double-precision floating-point numbers.</li>
+            </ul>
+            <p>Here's how you can declare variables with different data types and assign values:</p>
+            
+            <pre><code>// Declaring variables with different data types
+        int age = 25;
+        float temperature = 98.6;
+        char grade = 'A';
+        double pi = 3.14159;
+        
+        // Printing the values
+        printf("Age: %d\n", age);
+        printf("Temperature: %.2f\n", temperature);
+        printf("Grade: %c\n", grade);
+        printf("Pi: %lf\n", pi);
+        </code></pre>
+        
+            <p>In this example, variables are declared with their respective data types and assigned values. The <code>%d</code>, <code>%f</code>, <code>%c</code>, and <code>%lf</code> are format specifiers used with the <code>printf</code> function to print values with appropriate formatting.</p>
+        </section>
+        
+        <section id="operators">
+            <h2>Operators in C</h2>
+            <p>In C programming, operators are symbols that perform various operations on one or more operands. They are an essential part of expressing computations and logic in your code.</p>
+            <h3>Arithmetic Operators</h3>
+            <p>Arithmetic operators are used for mathematical calculations:</p>
+            <pre>
+                <code>
+                    int a = 10, b = 5;
+                    int sum = a + b; // Addition
+                    int diff = a - b; // Subtraction
+                    int product = a * b; // Multiplication
+                    int quotient = a / b; // Division
+                    int remainder = a % b; // Modulus
+                </code>
+            </pre>
+        
+            <h3>Relational Operators</h3>
+            <p>Relational operators are used to compare values:</p>
+            <pre>
+                <code>
+                    int x = 10, y = 20;
+                    if (x > y) {
+                        // Code if x is greater than y
+                    }
+                    if (x <= y) {
+                        // Code if x is less than or equal to y
+                    }
+                    // Other relational operators: ==, !=, >=, <
+                </code>
+            </pre>
+        
+            <h3>Logical Operators</h3>
+            <p>Logical operators are used to combine conditions:</p>
+            <pre>
+                <code>
+                    int p = 1, q = 0;
+                    if (p && q) {
+                        // Code if both p and q are true
+                    }
+                    if (p || q) {
+                        // Code if either p or q is true
+                    }
+                    if (!q) {
+                        // Code if q is false
+                    }
+                </code>
+            </pre>
+        
+            <!-- Add more examples for other types of operators -->
+        </section>
+        
+        <section id="controlstructures">
+    <h2>Control Structures in C</h2>
+    <p>Control structures in C allow you to dictate the flow of your program based on certain conditions. They include:</p>
+    
+    <h3>if Statement:</h3>
+    <p>The `if` statement is used to perform an action only if a certain condition is true.</p>
+    
+    ```c
+    if (condition) {
+        // Code to execute if the condition is true
+    }
+    ```
+
+    <h3>if-else Statement:</h3>
+    <p>The `if-else` statement allows you to execute one block of code if a condition is true and another block if it's false.</p>
+    
+    ```c
+    if (condition) {
+        // Code to execute if the condition is true
+    } else {
+        // Code to execute if the condition is false
+    }
+    ```
+
+    <h3>switch Statement:</h3>
+    <p>The `switch` statement is used to evaluate a variable against multiple possible cases and execute the corresponding block of code.</p>
+    
+    ```c
+    switch (variable) {
+        case value1:
+            // Code for value1
+            break;
+        case value2:
+            // Code for value2
+            break;
+        default:
+            // Code if no case matches
+    }
+    ```
+
+    <h3>for Loop:</h3>
+    <p>The `for` loop is used to repeat a block of code a specific number of times.</p>
+    
+    ```c
+    for (initialization; condition; increment/decrement) {
+        // Code to repeat
+    }
+    ```
+
+    <h3>while Loop:</h3>
+    <p>The `while` loop continues to execute a block of code as long as a condition is true.</p>
+    
+    ```c
+    while (condition) {
+        // Code to repeat
+    }
+    ```
+
+    <h3>do-while Loop:</h3>
+    <p>The `do-while` loop is similar to the `while` loop, but it guarantees the code inside the loop is executed at least once.</p>
+    
+    ```c
+    do {
+        // Code to repeat
+    } while (condition);
+    ```
+</section>
+
+<section id="control-structures">
+    <h2>Control Structures in C</h2>
+    <p>In C programming, control structures are used to control the flow of execution within a program. They allow you to make decisions, repeat actions, and create more complex behavior.</p>
+    
+    <h3>If Statement</h3>
+    <p>The <code>if</code> statement is used for conditional execution. It executes a block of code only if a specified condition is true.</p>
+    <pre><code>
+if (condition) {
+    // Code to execute if the condition is true
+}
+    </code></pre>
+    
+    <h3>While Loop</h3>
+    <p>The <code>while</code> loop repeats a block of code as long as a specified condition is true.</p>
+    <pre><code>
+while (condition) {
+    // Code to repeat as long as the condition is true
+}
+    </code></pre>
+    
+    <h3>For Loop</h3>
+    <p>The <code>for</code> loop is used to repeatedly execute a block of code for a specified number of iterations.</p>
+    <pre><code>
+for (initialization; condition; increment/decrement) {
+    // Code to execute in each iteration
+}
+    </code></pre>
+    
+    <h3>Switch Statement</h3>
+    <p>The <code>switch</code> statement is used for multiple conditional branches based on the value of an expression.</p>
+    <pre><code>
+switch (expression) {
+    case value1:
+        // Code for value1
+        break;
+    case value2:
+        // Code for value2
+        break;
+    // More cases...
+    default:
+        // Code if none of the cases match
+}
+    </code></pre>
+    
+    <!-- Add more control structures here -->
+</section>
+
+
+<section id="functions">
+    <h2>Functions in C</h2>
+    <p>In C programming, functions are blocks of code that can be defined and called to perform specific tasks. They help organize code and promote reusability.</p>
+    
+    <h3>Example of a Simple Function:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Function declaration
+void greet() {
+    printf("Hello, World!\n");
+}
+
+int main() {
+    // Calling the function
+    greet();
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of a Function with Parameters:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Function declaration with parameters
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 7); // Calling the function
+    printf("Result: %d\n", result);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of a Function with Return Value:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Function declaration with return value
+int square(int x) {
+    return x * x;
+}
+
+int main() {
+    int num = 4;
+    int squared = square(num); // Calling the function
+    printf("Square of %d is %d\n", num, squared);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of a Recursive Function:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Recursive function to calculate factorial
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int num = 5;
+    int fact = factorial(num); // Calling the function
+    printf("Factorial of %d is %d\n", num, fact);
+    return 0;
+}
+    </code></pre>
+</section>
+
+
+<section id="arrays">
+    <h2>Arrays in C</h2>
+    <p>An array is a collection of elements of the same data type, stored in contiguous memory locations. Arrays are used to store and manipulate a series of values efficiently.</p>
+    
+    <h3>Example of a One-dimensional Array:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int numbers[5]; // Declaration of an integer array of size 5
+    
+    // Initializing array elements
+    numbers[0] = 10;
+    numbers[1] = 20;
+    numbers[2] = 30;
+    numbers[3] = 40;
+    numbers[4] = 50;
+    
+    // Accessing and printing array elements
+    printf("Element at index 2: %d\n", numbers[2]); // Output: 30
+    
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of a Two-dimensional Array:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    
+    // Accessing and printing array elements
+    printf("Element at row 2, column 1: %d\n", matrix[1][0]); // Output: 4
+    
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of an Array of Strings:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    char names[3][10] = {
+        "Alice",
+        "Bob",
+        "Charlie"
+    };
+    
+    // Accessing and printing array elements
+    printf("Name at index 1: %s\n", names[1]); // Output: Bob
+    
+    return 0;
+}
+    </code></pre>
+</section>
+
+
+<section id="pointers">
+    <h2>Pointers in C</h2>
+    <p>Pointers are variables that store memory addresses. They allow you to work directly with memory and are essential for tasks like dynamic memory allocation and efficient data manipulation.</p>
+
+    <h3>Example of Declaring and Using a Pointer:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int num = 42;
+    int *ptr; // Declare a pointer
+    ptr = &num; // Assign the address of 'num' to the pointer
+
+    printf("Value of num: %d\n", num);
+    printf("Value of *ptr: %d\n", *ptr); // Dereference the pointer
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Pointer Arithmetic:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+    int *ptr = numbers; // Pointer to the first element
+
+    for (int i = 0; i < 5; i++) {
+        printf("Value at index %d: %d\n", i, *ptr);
+        ptr++; // Move the pointer to the next element
+    }
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Pointers and Functions:</h3>
+    <pre><code>
+#include <stdio.h>
+
+void changeValue(int *x) {
+    *x = 100;
+}
+
+int main() {
+    int num = 42;
+    printf("Before: %d\n", num);
+    changeValue(&num); // Pass the address of 'num' to the function
+    printf("After: %d\n", num);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Pointer to Pointers:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int num = 42;
+    int *ptr = &num;
+    int **ptrToPtr = &ptr;
+
+    printf("Value of num: %d\n", num);
+    printf("Value of *ptr: %d\n", *ptr);
+    printf("Value of **ptrToPtr: %d\n", **ptrToPtr);
+    return 0;
+}
+    </code></pre>
+</section>
+
+
+<section id="structs">
+    <h2>Structures in C</h2>
+    <p>In C programming, structures allow you to group together different data types under a single name. This enables you to create more complex data types that represent real-world entities.</p>
+    
+    <h3>Example of Defining and Using a Structure:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Define a structure
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    // Declare a structure variable
+    struct Person person1;
+
+    // Initialize structure members
+    strcpy(person1.name, "John");
+    person1.age = 30;
+
+    // Access structure members
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Nested Structures:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Define nested structures
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+struct Student {
+    char name[50];
+    int rollNumber;
+    struct Date birthdate; // Nested structure
+};
+
+int main() {
+    struct Student student1;
+    student1.rollNumber = 101;
+    strcpy(student1.name, "Alice");
+    student1.birthdate.day = 10;
+    student1.birthdate.month = 5;
+    student1.birthdate.year = 2000;
+
+    printf("Student Name: %s\n", student1.name);
+    printf("Roll Number: %d\n", student1.rollNumber);
+    printf("Birthdate: %d/%d/%d\n", student1.birthdate.day, student1.birthdate.month, student1.birthdate.year);
+
+    return 0;
+}
+    </code></pre>
+</section>
+
+<section id="fileio">
+    <h2>File I/O in C</h2>
+    <p>File I/O (Input/Output) in C allows you to read data from files and write data to files. This is important for tasks such as reading and writing text files, binary files, and more.</p>
+    
+    <h3>Example of Writing to a File:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("output.txt", "w"); // Open file for writing
+    
+    if (file != NULL) {
+        fprintf(file, "Hello, File I/O!\n");
+        fclose(file); // Close the file
+    } else {
+        printf("Error opening file.\n");
+    }
+    
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Reading from a File:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("input.txt", "r"); // Open file for reading
+    
+    if (file != NULL) {
+        char buffer[100];
+        while (fgets(buffer, sizeof(buffer), file) != NULL) {
+            printf("%s", buffer);
+        }
+        fclose(file); // Close the file
+    } else {
+        printf("Error opening file.\n");
+    }
+    
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Binary File I/O:</h3>
+    <pre><code>
+#include <stdio.h>
+
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    FILE *file = fopen("people.dat", "wb"); // Open binary file for writing
+    
+    if (file != NULL) {
+        struct Person person;
+        strcpy(person.name, "John");
+        person.age = 25;
+        
+        fwrite(&person, sizeof(struct Person), 1, file);
+        fclose(file); // Close the file
+    } else {
+        printf("Error opening file.\n");
+    }
+    
+    return 0;
+}
+    </code></pre>
+</section>
+
+<section id="dynamicmemory">
+    <h2>Dynamic Memory Allocation in C</h2>
+    <p>Dynamic memory allocation allows you to allocate memory for variables and data structures at runtime. This is particularly useful when you don't know the required memory size at compile time.</p>
+    
+    <h3>Example of Allocating Memory:</h3>
+    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr;
+    int size = 5;
+
+    // Allocate memory for an array of integers
+    ptr = (int *)malloc(size * sizeof(int));
+    if (ptr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // Assign values to the allocated memory
+    for (int i = 0; i < size; i++) {
+        ptr[i] = i * 10;
+    }
+
+    // Print the array values
+    for (int i = 0; i < size; i++) {
+        printf("%d ", ptr[i]);
+    }
+
+    // Free allocated memory
+    free(ptr);
+
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Reallocating Memory:</h3>
+    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr;
+    int initialSize = 3;
+    
+    // Allocate memory for an initial array of integers
+    ptr = (int *)malloc(initialSize * sizeof(int));
+    if (ptr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // Resize the allocated memory to fit more integers
+    int newSize = 5;
+    ptr = (int *)realloc(ptr, newSize * sizeof(int));
+    if (ptr == NULL) {
+        printf("Memory reallocation failed\n");
+        return 1;
+    }
+
+    // Assign values to the resized memory
+    for (int i = 0; i < newSize; i++) {
+        ptr[i] = i * 5;
+    }
+
+    // Print the array values
+    for (int i = 0; i < newSize; i++) {
+        printf("%d ", ptr[i]);
+    }
+
+    // Free allocated memory
+    free(ptr);
+
+    return 0;
+}
+    </code></pre>
+</section>
+
+
+<section id="preprocessor">
+    <h2>Preprocessor Directives in C</h2>
+    <p>Preprocessor directives in C are commands that are processed before the compilation of the program. They are used to provide instructions to the compiler to perform specific tasks before the actual compilation begins.</p>
+    
+    <h3>Example of Including Header Files:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Conditional Compilation:</h3>
+    <pre><code>
+#include <stdio.h>
+
+#define DEBUG 1
+
+int main() {
+    #ifdef DEBUG
+        printf("Debugging mode\n");
+    #else
+        printf("Release mode\n");
+    #endif
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Macros:</h3>
+    <pre><code>
+#include <stdio.h>
+
+#define SQUARE(x) (x * x)
+
+int main() {
+    int num = 5;
+    int result = SQUARE(num);
+    printf("Square of %d is %d\n", num, result);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Including User-Defined Header:</h3>
+    <pre><code>
+// math_functions.h
+#ifndef MATH_FUNCTIONS_H
+#define MATH_FUNCTIONS_H
+
+int add(int a, int b);
+int subtract(int a, int b);
+
+#endif
+
+// main.c
+#include <stdio.h>
+#include "math_functions.h"
+
+int main() {
+    int a = 10, b = 5;
+    int sum = add(a, b);
+    int difference = subtract(a, b);
+    printf("Sum: %d\nDifference: %d\n", sum, difference);
+    return 0;
+}
+    </code></pre>
+</section>
+
+
+<section id="recursion">
+    <h2>Recursion in C</h2>
+    <p>Recursion is a programming technique in which a function calls itself to solve a problem. It is particularly useful for solving problems that can be broken down into smaller sub-problems of the same nature.</p>
+    
+    <h3>Example of a Simple Recursive Function:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Recursive function to count down from n to 1
+void countdown(int n) {
+    if (n > 0) {
+        printf("%d ", n);
+        countdown(n - 1); // Recursive call
+    }
+}
+
+int main() {
+    int num = 5;
+    printf("Countdown from %d:\n", num);
+    countdown(num);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Recursive Factorial Function:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Recursive function to calculate factorial
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1); // Recursive call
+    }
+}
+
+int main() {
+    int num = 5;
+    int fact = factorial(num);
+    printf("Factorial of %d is %d\n", num, fact);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Recursive Fibonacci Series:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Recursive function to calculate Fibonacci number
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2); // Recursive call
+    }
+}
+
+int main() {
+    int num = 6;
+    printf("Fibonacci series up to %d:\n", num);
+    for (int i = 0; i < num; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    return 0;
+}
+    </code></pre>
+</section>
+
+<section id="bitwise">
+    <h2>Bitwise Operations in C</h2>
+    <p>Bitwise operations manipulate individual bits of integer values. They are often used in tasks like setting, clearing, toggling bits, and performing other low-level operations.</p>
+    
+    <h3>Example of Bitwise AND (&) Operation:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int a = 5;    // 0101 in binary
+    int b = 3;    // 0011 in binary
+    int result = a & b;  // Bitwise AND operation
+    printf("Result: %d\n", result); // Output: 1 (0001 in binary)
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Bitwise OR (|) Operation:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int a = 5;    // 0101 in binary
+    int b = 3;    // 0011 in binary
+    int result = a | b;  // Bitwise OR operation
+    printf("Result: %d\n", result); // Output: 7 (0111 in binary)
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Bitwise XOR (^) Operation:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int a = 5;    // 0101 in binary
+    int b = 3;    // 0011 in binary
+    int result = a ^ b;  // Bitwise XOR operation
+    printf("Result: %d\n", result); // Output: 6 (0110 in binary)
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Bitwise NOT (~) Operation:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int a = 5;    // 0101 in binary
+    int result = ~a;  // Bitwise NOT operation
+    printf("Result: %d\n", result); // Output: -6 (1010 in two's complement binary)
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Left Shift (<<) Operation:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int main() {
+    int a = 5;    // 0101 in binary
+    int result = a << 2;  // Left shift by 2 positions
+    printf("Result: %d\n", result); // Output: 20 (10100 in binary)
+    return 0;
+}
+    </code></pre>
+</section>
+
+<section id="typedef">
+    <h2>typedef and Type Aliases in C</h2>
+    <p>In C programming, `typedef` is used to create new type names for existing data types. This can make the code more readable and maintainable by providing descriptive names for data types.</p>
+    
+    <h3>Example of using typedef:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Creating a type alias using typedef
+typedef unsigned int uint;
+
+int main() {
+    uint age = 25;
+    printf("Age: %u\n", age);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of using typedef with Structs:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Defining a struct without typedef
+struct Point {
+    int x;
+    int y;
+};
+
+// Creating a type alias for the struct
+typedef struct Point Point;
+
+int main() {
+    Point p1;
+    p1.x = 10;
+    p1.y = 20;
+    printf("Point: (%d, %d)\n", p1.x, p1.y);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Creating Type Aliases with Enum:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Defining an enum without typedef
+enum Day {
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
+
+// Creating a type alias for the enum
+typedef enum Day Day;
+
+int main() {
+    Day today = Wednesday;
+    printf("Today is %d\n", today);
+    return 0;
+}
+    </code></pre>
+</section>
+
+<section id="enum">
+    <h2>Enumeration in C</h2>
+    <p>An enumeration in C is a user-defined data type that consists of a set of named constants, often representing a collection of related values.</p>
+    
+    <h3>Example of Enumeration Declaration:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Declaration of an enumeration
+enum Days {
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
+
+int main() {
+    // Using the enumeration constants
+    enum Days today = Wednesday;
+    printf("Today is %d\n", today);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Assigning Values to Enumeration Constants:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Enumeration with assigned values
+enum Months {
+    January = 1,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+};
+
+int main() {
+    enum Months currentMonth = August;
+    printf("Current month: %d\n", currentMonth);
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Using Enumeration in Switch Statement:</h3>
+    <pre><code>
+#include <stdio.h>
+
+// Enumeration for days of the week
+enum Days {
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
+
+int main() {
+    enum Days today = Wednesday;
+
+    switch (today) {
+        case Sunday:
+            printf("It's a lazy day!\n");
+            break;
+        case Saturday:
+            printf("Time to relax!\n");
+            break;
+        default:
+            printf("Another work day...\n");
+            break;
+    }
+
+    return 0;
+}
+    </code></pre>
+</section>
+
+<section id="linkedlist">
+    <h2>Linked List in C</h2>
+    <p>A linked list is a data structure that consists of a sequence of nodes, where each node stores data and a reference to the next node in the sequence.</p>
+    
+    <h3>Example of a Simple Linked List:</h3>
+    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to print a linked list
+void printLinkedList(struct Node* head) {
+    struct Node* current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    // Creating nodes
+    struct Node* first = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* second = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* third = (struct Node*)malloc(sizeof(struct Node));
+    
+    // Assigning data and linking nodes
+    first->data = 1;
+    first->next = second;
+    
+    second->data = 2;
+    second->next = third;
+    
+    third->data = 3;
+    third->next = NULL;
+    
+    // Printing the linked list
+    printLinkedList(first);
+    
+    // Freeing allocated memory
+    free(first);
+    free(second);
+    free(third);
+    
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of a Linked List with Insertion:</h3>
+    <pre><code>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to insert a new node at the beginning
+struct Node* insertAtBeginning(struct Node* head, int newData) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = newData;
+    newNode->next = head;
+    return newNode;
+}
+
+// Function to print a linked list
+void printLinkedList(struct Node* head) {
+    struct Node* current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    struct Node* head = NULL;
+    
+    // Inserting elements at the beginning
+    head = insertAtBeginning(head, 3);
+    head = insertAtBeginning(head, 2);
+    head = insertAtBeginning(head, 1);
+    
+    // Printing the linked list
+    printLinkedList(head);
+    
+    // Freeing allocated memory
+    // (Don't forget to free nodes before exiting the program)
+    
+    return 0;
+}
+    </code></pre>
+</section>
+
+
+<section id="sorting">
+    <h2>Sorting Algorithms in C</h2>
+    <p>Sorting algorithms are essential in computer science to arrange elements in a specific order, such as ascending or descending. Here, we'll explore a few common sorting algorithms.</p>
+    
+    <h3>Example of Bubble Sort:</h3>
+    <pre><code>
+#include <stdio.h>
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    bubbleSort(arr, n);
+    
+    printf("Sorted array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Selection Sort:</h3>
+    <pre><code>
+#include <stdio.h>
+
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        // Swap elements
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    selectionSort(arr, n);
+    
+    printf("Sorted array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
+    </code></pre>
+</section>
+
+<section id="searching">
+    <h2>Searching Algorithms in C</h2>
+    <p>Searching algorithms are used to find the presence or location of a specific value within a data structure like an array or a list.</p>
+
+    <h3>Example of Linear Search:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int linearSearch(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i; // Element found at index i
+        }
+    }
+    return -1; // Element not found
+}
+
+int main() {
+    int arr[] = {5, 10, 15, 20, 25};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 15;
+    int result = linearSearch(arr, size, target);
+    if (result != -1) {
+        printf("Element found at index %d\n", result);
+    } else {
+        printf("Element not found\n");
+    }
+    return 0;
+}
+    </code></pre>
+
+    <h3>Example of Binary Search:</h3>
+    <pre><code>
+#include <stdio.h>
+
+int binarySearch(int arr[], int size, int target) {
+    int low = 0;
+    int high = size - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == target) {
+            return mid; // Element found at index mid
+        } else if (arr[mid] < target) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1; // Element not found
+}
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50, 60, 70};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 40;
+    int result = binarySearch(arr, size, target);
+    if (result != -1) {
+        printf("Element found at index %d\n", result);
+    } else {
+        printf("Element not found\n");
+    }
+    return 0;
+}
+    </code></pre>
+</section>
+
+        <!-- Add more sections for each topic -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+</body>
+</html>
